@@ -1,13 +1,15 @@
 package pe.edu.upeu.msconfigserver;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
-@SpringBootTest
+@EnableConfigServer
+@SpringBootApplication
 class MsConfigServerApplicationTests {
 
-	@Test
-	void contextLoads() {
+	public static void main(String[] args) {
+		SpringApplication.run(MsConfigServerApplication.class, args);
 	}
 
 }
